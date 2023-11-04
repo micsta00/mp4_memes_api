@@ -1,0 +1,2 @@
+PORT=4000
+MONG_URI=mongodb+srv://<user>:<password>@mernapp.vwoxiyq.mongodb.net/?retryWrites=true&w=majority
