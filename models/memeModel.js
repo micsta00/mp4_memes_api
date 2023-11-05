@@ -31,6 +31,6 @@ const memeSchema = new Schema({
         type: Number,
         required: true
     },
-}, { timestamps: false })
+}, { collection: "memes_mp4" })
 
 module.exports = mongoose.model('Meme', memeSchema)
