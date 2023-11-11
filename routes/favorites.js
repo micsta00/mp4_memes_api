@@ -1,8 +1,4 @@
 const express = require('express')
-const {
-    getMemes,
-    getMeme
-} = require('../controllers/memeController')
 
 const {
     getFavorites,
@@ -16,12 +12,10 @@ const router = express.Router()
 // require auth for all workout routes
 router.use(requireAuth)
 
-// GET all memes
-router.get('/', getMemes)
+// GET all favorites
+router.get('/', getFavorites)
 
-// GET a single meme
-router.get('/:id', getMeme)
-
-
+// POST a new favorite
+router.post('/', createFavorite)
 
 module.exports = router
