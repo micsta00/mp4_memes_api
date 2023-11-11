@@ -7,6 +7,7 @@ const cors = require('cors')
 const memeRoutes = require('./routes/memes')
 const userRoutes = require('./routes/user')
 const favoritesRoutes = require('./routes/favorites')
+const dislikedRoutes = require('./routes/disliked')
 
 // express app
 const app = express()
@@ -24,6 +25,7 @@ app.use((req, res, next) => {
 app.use('/api/memes/mp4', memeRoutes)
 app.use('/api/user', userRoutes)
 app.use('/api/memes/favorites', favoritesRoutes)
+app.use('/api/memes/disliked', dislikedRoutes)
 
 
 // connect to db
